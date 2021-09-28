@@ -1,0 +1,35 @@
+.container{
+    height: 80px;
+    align-items: center;
+  
+}
+.row{
+    height: 100%;
+    align-items: center;
+}
+.col-2{
+    display: flex;
+    justify-content: space-evenly;
+}
+a{
+    display: inline-block;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+.col-8{
+    display: flex;
+    justify-content: center;
+}
+.col-8 a{
+    margin: 0px 15px;
+}
+.active{
+    text-decoration: underline;
+    color: rgba(0,0,0,0.75);
+}
+.heading{
+    font-size: calc(((20)/ (15)) * 1em);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}

@@ -1,0 +1,23 @@
+
+
+svg{
+    background-color: rgba(51, 50, 50, 0.1);
+    fill: rgba(51, 50, 50, 0.35);
+    border: 1px solid rgba(51, 50, 50, 0.35);
+    width: 100;
+    object-fit: cover;
+}
+.description{
+    padding: 20px 0px;
+}
+
+@media (max-width:768px) {
+    .myproductcard{
+        width: 45%;
+    }
+}
+@media (max-width:496px) {
+    .myproductcard{
+        width: 80%;
+    }
+}

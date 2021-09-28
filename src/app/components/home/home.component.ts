@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Overlay } from 'src/app/shared/Overlay';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +12,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  heading:Overlay={
+    heading: "Image with text overlay" ,
+    data:"Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story."
+  }
+  body:Overlay={
+    heading: "Image with text overlay" ,
+    data:"Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story."
+  }
 }

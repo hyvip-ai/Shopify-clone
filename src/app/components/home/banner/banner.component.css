@@ -11,8 +11,11 @@
     height: 100%;
     width: 100%;
 }
+
 .banner_bg_svg svg{
     fill: #8e8686;
+    background-color: transparent;
+    border: none;
 }
 .banner .banner_bg_overlay{
     position: absolute;
@@ -45,4 +48,9 @@ p{
     max-width: 70%;
     font-family:Helvetica;
     text-align: center;
+}
+@media (max-width:768px) {
+    .banner{
+        height: 500px;
+    }
 }

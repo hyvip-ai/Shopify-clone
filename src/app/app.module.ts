@@ -11,6 +11,7 @@ import { FeatureProductsComponent } from './components/home/feature-products/fea
 import { FooterComponent } from './components/footer/footer.component';
 import { FeatureCardsComponent } from './components/home/feature-cards/feature-cards.component';
 import { FeatureProductCardsComponent } from './components/home/feature-products/feature-product-cards/feature-product-cards.component';
+import { ImagesSectionComponent } from './components/home/images-section/images-section.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FeatureProductCardsComponent } from './components/home/feature-products
     FeatureProductsComponent,
     FooterComponent,
     FeatureCardsComponent,
-    FeatureProductCardsComponent
+    FeatureProductCardsComponent,
+    ImagesSectionComponent
   ],
   imports: [
     BrowserModule,

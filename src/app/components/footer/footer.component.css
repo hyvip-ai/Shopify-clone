@@ -1,0 +1,11 @@
+.bottom{
+    height: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #f6f6f6;
+}
+p{
+    padding: 0px 10px;
+    font-size: 12px;
+}

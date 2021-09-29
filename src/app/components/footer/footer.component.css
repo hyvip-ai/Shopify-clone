@@ -5,16 +5,23 @@
     justify-content: flex-end;
     background-color: #f6f6f6;
 }
-p{
+.bottom p{
     padding: 0px 10px;
     font-size: 12px;
     cursor: pointer;
 }
 .upper{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.6);
     margin-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #f6f6f6;
 }
 .left,.right{
     width: 40%;
@@ -41,4 +48,24 @@ button{
     background-color: black;
     color: white;
     border-color: black;
+}
+
+@media (max-width:820px) {
+    .left,.right{
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    input{
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+    button{
+        margin: 10px auto;
+
+        width: 80%;
+        display: block;
+    }
 }

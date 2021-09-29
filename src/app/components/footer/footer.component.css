@@ -8,4 +8,37 @@
 p{
     padding: 0px 10px;
     font-size: 12px;
+    cursor: pointer;
+}
+.upper{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.left,.right{
+    width: 40%;
+}
+.right{
+    text-align: right;
+}
+.upper h6{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.upper .left p{
+    font-size: 14px;
+}
+input,button{
+    display: inline-block;
+    padding: 5px;
+}
+input{
+    width: 70%;
+}
+button{
+    width: 30%;
+    background-color: black;
+    color: white;
+    border-color: black;
 }

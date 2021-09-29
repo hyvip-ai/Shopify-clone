@@ -10,6 +10,10 @@ h1{
 .row{
     justify-content: space-evenly;
 }
+app-feature-product-cards{
+    cursor: pointer;
+    margin-bottom: 25px;
+}
 
 @media (max-width:768px) {
     .myproductcard{

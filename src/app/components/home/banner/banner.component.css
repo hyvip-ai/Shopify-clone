@@ -2,23 +2,33 @@
     
     height: 650px;
     background-color: #b2abab;
-    padding: 55px 0px;
+    
     overflow: hidden;
     position: relative;
     margin-bottom: 55px;
 }
-.banner_bg_svg{
+.banner::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(25, 42, 86,0.4);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.banner .banner_bg_img{
     height: 100%;
     width: 100%;
 }
-
-.banner_bg_svg svg{
-    fill: #8e8686;
-    background-color: transparent;
-    border: none;
+.banner .banner_bg_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .banner .banner_bg_overlay{
     position: absolute;
+    z-index: 50;
     top: 0;
     left: 0;
     height: 100%;

@@ -2,10 +2,17 @@
     padding: 0;
     
 }
+app-image{
+    width: 32%;
+    height: 475px;
+    overflow: hidden;
+}
 
 @media (max-width:768px) {
-    .col-md-4{
-        width: 400px;
+    app-image{
         height: 360px;
+        width: 80%;
+        margin: 25px 0px;
     }
 }
+

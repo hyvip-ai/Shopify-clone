@@ -13,7 +13,7 @@ export class FeatureProductCardsComponent implements OnInit {
   constructor(private sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
-    this.productData.image = this.transform(this.productData.image)
+    
   }
   @Input() productData:FeatureProductCard = {
     image:"",
@@ -21,8 +21,5 @@ export class FeatureProductCardsComponent implements OnInit {
     price:0
   }
 
-  transform(data:any):SafeHtml{
-    return this.sanitizer.bypassSecurityTrustHtml(data);
-  }
 
 }

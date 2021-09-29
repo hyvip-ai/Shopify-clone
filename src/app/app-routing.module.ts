@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FeatureProductCardsComponent } from './components/home/feature-products/feature-product-cards/feature-product-cards.component';
+import { CollectionsComponent } from './components/collections/collections.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
-    path:"",component:HomeComponent
-  },
+    path:"",pathMatch:"full",redirectTo:"home"
+    },
+    {
+      path:"home",component:HomeComponent
+    },
   {
-    path:"test",component:FeatureProductCardsComponent
+    path:"collection",component:CollectionsComponent
   }
 ];
 

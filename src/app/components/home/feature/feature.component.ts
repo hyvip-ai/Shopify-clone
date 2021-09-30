@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FeatureService } from 'src/app/services/feature/feature.service';
+import { Feature } from 'src/app/shared/Feature';
 
 @Component({
   selector: 'app-feature',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeatureComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:FeatureService) { }
 
   ngOnInit(): void {
   }
+  FeatureData:Feature[]=this.service.FeatureData
 
 }

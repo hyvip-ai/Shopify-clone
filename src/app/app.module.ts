@@ -15,6 +15,13 @@ import { ImagesSectionComponent } from './components/home/images-section/images-
 import { FeatureCardComponent } from './components/home/feature-cards/feature-card/feature-card.component';
 import { ImageComponent } from './components/home/images-section/image/image.component';
 import { CollectionsComponent } from './components/collections/collections.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { BannerService } from './services/banner/banner.service';
+import { FeaturedcollectionService } from './services/featured-colleaction/featuredcollection.service';
+import { FeatureSectionComponent } from './components/home/feature/feature-section/feature-section.component';
+import { FeatureService } from './services/feature/feature.service';
+import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
+import { TestimonialComponent } from './components/home/testimonials/testimonial/testimonial.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +38,16 @@ import { CollectionsComponent } from './components/collections/collections.compo
     FeatureCardComponent,
     ImageComponent,
     CollectionsComponent,
+    AdminComponent,
+    FeatureSectionComponent,
+    TestimonialsComponent,
+    TestimonialComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [BannerService,FeaturedcollectionService,FeatureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

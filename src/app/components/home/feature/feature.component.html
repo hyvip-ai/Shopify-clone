@@ -1,11 +1,6 @@
 <div class="container">
-    <div class="mymain">
-        <div class="left">
-            <img src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNsb3RoaW5nfGVufDB8MXwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Feature Image">
-        </div>
-        <div class="right" style="display: flex;flex-direction: column;justify-content: center">
-            <h3>Image With Text</h3>
-            <p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>
-        </div>
-    </div>
+    <app-feature-section class="mymain" *ngFor="let item of FeatureData;index as i" [index]="i" [FeatureData]="item">
+
+    </app-feature-section>
+
 </div>

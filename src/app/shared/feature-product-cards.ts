@@ -1,7 +1,6 @@
-import { SafeHtml } from "@angular/platform-browser";
 
 export interface FeatureProductCard{
-    image:string|SafeHtml,
+    image:string,
     name:string,
     price:number
 }

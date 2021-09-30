@@ -33,6 +33,10 @@ p{
     }
     .left{
         margin-bottom: 30px;
+        order: 1!important;
+    }
+    .right{
+        order: 2;
     }
     
     

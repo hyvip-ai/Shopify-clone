@@ -49,6 +49,9 @@ button{
     color: white;
     border-color: black;
 }
+input:focus{
+    outline: none;
+}
 
 @media (max-width:820px) {
     .left,.right{

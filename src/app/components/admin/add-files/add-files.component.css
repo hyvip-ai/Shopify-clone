@@ -1,0 +1,6 @@
+app-add-banne,app-add-middle-banner,app-famous,app-collection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:50px auto;
+}

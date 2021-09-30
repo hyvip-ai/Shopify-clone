@@ -22,7 +22,13 @@ import { FeatureSectionComponent } from './components/home/feature/feature-secti
 import { FeatureService } from './services/feature/feature.service';
 import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 import { TestimonialComponent } from './components/home/testimonials/testimonial/testimonial.component';
-
+import { AddFilesComponent } from './components/admin/add-files/add-files.component';
+import { AddBanneComponent } from './components/admin/add-files/add-banne/add-banne.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
+import { AddMiddleBannerComponent } from './components/admin/add-files/add-middle-banner/add-middle-banner.component';
+import { FamousComponent } from './components/admin/add-files/famous/famous.component';
+import { CollectionComponent } from './components/admin/add-files/collection/collection.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,10 +48,18 @@ import { TestimonialComponent } from './components/home/testimonials/testimonial
     FeatureSectionComponent,
     TestimonialsComponent,
     TestimonialComponent,
+    AddFilesComponent,
+    AddBanneComponent,
+    AddMiddleBannerComponent,
+    FamousComponent,
+    CollectionComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [BannerService,FeaturedcollectionService,FeatureService],
   bootstrap: [AppComponent]

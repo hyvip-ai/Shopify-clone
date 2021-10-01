@@ -28,7 +28,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import { AddMiddleBannerComponent } from './components/admin/add-files/add-middle-banner/add-middle-banner.component';
 import { FamousComponent } from './components/admin/add-files/famous/famous.component';
-import { CollectionComponent } from './components/admin/add-files/collection/collection.component'
+import { CollectionComponent } from './components/admin/add-files/collection/collection.component';
+import { AddProductsComponent } from './components/admin/add-files/add-products/add-products.component';
+import { ProductDetailsFormComponent } from './components/admin/product-details-form/product-details-form.component'
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { AddTestimonialsComponent } from './components/admin/add-files/add-testimonials/add-testimonials.component';
+import { AddFeaturedImagesComponent } from './components/admin/add-files/add-featured-images/add-featured-images.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,13 +58,18 @@ import { CollectionComponent } from './components/admin/add-files/collection/col
     AddMiddleBannerComponent,
     FamousComponent,
     CollectionComponent,
+    AddProductsComponent,
+    ProductDetailsFormComponent,
+    AddTestimonialsComponent,
+    AddFeaturedImagesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularEditorModule
   ],
   providers: [BannerService,FeaturedcollectionService,FeatureService],
   bootstrap: [AppComponent]

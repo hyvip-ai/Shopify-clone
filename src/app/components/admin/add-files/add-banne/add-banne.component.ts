@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { BannerService } from 'src/app/services/banner/banner.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -9,15 +10,15 @@ import Swal from 'sweetalert2';
 })
 export class AddBanneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private banner:BannerService) { }
 
   ngOnInit(): void {
 
   }
   bannerForm = new FormGroup({
-    imageUrl:new FormControl("",[Validators.required]),
-    bannerHeading:new FormControl("",[Validators.required]),
-    bannerData:new FormControl("",[Validators.required]) 
+    image:new FormControl("",[Validators.required]),
+    head:new FormControl("",[Validators.required]),
+    data:new FormControl("",[Validators.required]) 
   })
   submitBannerForm(){
     console.log(this.heading)
@@ -31,6 +32,9 @@ export class AddBanneComponent implements OnInit {
 
       }
       console.log(this.bannerForm.value);
+      this.banner.createBanner(this.bannerForm.value).subscribe(res=>{
+        console.log(res);
+      },err=>console.log(err))
     }
     else{
       Swal.fire({

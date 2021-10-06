@@ -1,12 +1,22 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Banner } from 'src/app/shared/BannerCardDaa';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BannerService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+  createBanner(data:Banner){
+      return this.http.post(`${environment.baseUrl}/api/addBanner/${localStorage.getItem("storeId")}`,data,{
+        headers:{
+          "Access-Control-Allow-Origin":"*",
+          "content-type":"application/json"
+        }
+      })
+  }
   middleBanner:Banner={
     image:"https://images.unsplash.com/photo-1621951767587-b24334f11c65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
     head: "Image with text overlay" ,

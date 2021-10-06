@@ -34,6 +34,7 @@ import { ProductDetailsFormComponent } from './components/admin/product-details-
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { AddTestimonialsComponent } from './components/admin/add-files/add-testimonials/add-testimonials.component';
 import { AddFeaturedImagesComponent } from './components/admin/add-files/add-featured-images/add-featured-images.component';
+import { AddStoreComponent } from './components/admin/add-store/add-store.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +63,7 @@ import { AddFeaturedImagesComponent } from './components/admin/add-files/add-fea
     ProductDetailsFormComponent,
     AddTestimonialsComponent,
     AddFeaturedImagesComponent,
+    AddStoreComponent,
   ],
   imports: [
     BrowserModule,

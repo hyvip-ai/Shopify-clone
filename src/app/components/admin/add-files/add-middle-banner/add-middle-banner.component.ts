@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { BannerService } from 'src/app/services/banner/banner.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -9,18 +10,18 @@ import Swal from 'sweetalert2';
 })
 export class AddMiddleBannerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private banner:BannerService) { }
 
   ngOnInit(): void {
 
   }
   middlebannerForm = new FormGroup({
-    imageUrl:new FormControl("",[Validators.required]),
-    bannerHeading:new FormControl("",[Validators.required]),
-    bannerData:new FormControl("",[Validators.required]) 
+    image:new FormControl("",[Validators.required]),
+    head:new FormControl("",[Validators.required]),
+    data:new FormControl("",[Validators.required]) 
   })
   submitBannerForm(){
-    console.log(this.heading)
+    // console.log("This is Heading" + this.heading)
 
     if(this.middlebannerForm.valid){
       if(this.heading.split(" ").includes("Top")){
@@ -31,6 +32,9 @@ export class AddMiddleBannerComponent implements OnInit {
 
       }
       console.log(this.middlebannerForm.value);
+      this.banner.createBanner(this.middlebannerForm.value).subscribe(res=>{
+        console.log(res);
+      },err=>console.log(err))
     }
     else{
       Swal.fire({

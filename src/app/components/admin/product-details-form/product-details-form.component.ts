@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 @Component({
   selector: 'app-product-details-form',
@@ -6,7 +7,12 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
   styleUrls: ['./product-details-form.component.css']
 })
 export class ProductDetailsFormComponent implements OnInit {
-
+  productForm= new FormGroup({
+    name:new FormControl("",[Validators.required]),
+    price:new FormControl("",[Validators.required]),
+    availability:new FormControl("",[Validators.required]),
+    details:new FormControl("",[Validators.required])
+  })
   constructor() { }
   editorConfig: AngularEditorConfig = {
     editable: true,
@@ -54,5 +60,7 @@ export class ProductDetailsFormComponent implements OnInit {
 };
   ngOnInit(): void {
   }
-
+  addProduct(){
+    console.log(this.productForm.value)
+  }
 }

@@ -21,6 +21,9 @@ const routes: Routes = [
   },
   {
     path:"addProductDetails",component:ProductDetailsFormComponent
+  },
+  {
+    path:"addFiles",component:AddFilesComponent
   }
 ];
 

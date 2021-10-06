@@ -1,0 +1,30 @@
+<h1>Add Your Store</h1>
+
+<div type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalStore" class="add"><i class="fas fa-plus"></i></div>
+  <div class="modal fade" id="exampleModalStore" tabindex="-1" role="dialog" aria-labelledby="exampleModalStoreLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalStoreLabel">Add Banner Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="storeForm">
+            <div class="form-group">
+              <label for="img">Enter Your Store Name <span class="required">*</span></label>
+              <input (input)="changeStoreName()" formControlName="name" class="form-control" type="text" name="" id="img">
+            </div>
+        
+        
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-info" (click)="addStore()" data-dismiss="modal">Submit Data</button>
+     
+       
+        </div>
+      </div>
+    </div>
+  </div>

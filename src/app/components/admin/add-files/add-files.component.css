@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 app-add-banne,app-add-middle-banner,app-famous,app-collection,app-add-products,app-add-testimonials,app-add-featured-images{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin:50px auto;
 }
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+

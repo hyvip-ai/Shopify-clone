@@ -1,5 +1,5 @@
-<h1 style="margin-bottom: 20px;">{{heading}}</h1>
-
+<h1 style="margin-bottom: 20px;">{{heading}} (3 Recommended)</h1>
+<h6 *ngIf="features>0">{{features}} Images Have Already Been Added</h6>
 <div type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalImage" class="add"><i class="fas fa-plus"></i></div>
   <div class="modal fade" id="exampleModalImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelImage" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -14,14 +14,13 @@
           <form [formGroup]="imageForm">
             <div class="form-group">
               <label for="img">Image Url <span class="required">*</span></label>
-              <input formControlName="img" class="form-control" type="text" name="" id="img">
+              <input formControlName="image" class="form-control" type="text" name="" id="img">
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-info" (click)="submitImageForm()">Submit Data</button>
-          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-       
+          <button type="button" class="btn btn-outline-info" data-dismiss="modal" (click)="submitImageForm()">Submit Data</button>
+         
         </div>
       </div>
     </div>

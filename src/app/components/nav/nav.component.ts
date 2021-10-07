@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StoreService } from 'src/app/services/store/store.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { StoreService } from 'src/app/services/store/store.service';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private store:StoreService) { }
+  constructor(private store:StoreService,private router:Router) { }
   storename:string = "Shopify_Clone"
   data:any = null
   ngOnInit(): void {
@@ -18,5 +19,12 @@ export class NavComponent implements OnInit {
     this.storename = this.data.data.name
   })
   }
-
+  editingOpen(){
+    if(localStorage.getItem("storeId")){
+      this.router.navigate(["/addFiles"])
+    }
+    else{
+      this.router.navigate(["/admin"])
+    }
+  }
 }

@@ -25,9 +25,6 @@ const routes: Routes = [
   },
   {
     path:"addFiles",component:AddFilesComponent
-  },
-  {
-    path:"floating",component:FloatingButtonComponent
   }
 ];
 

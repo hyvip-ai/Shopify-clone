@@ -73,7 +73,7 @@ export class AddStoreComponent implements OnInit {
           icon:'success',
           title:this.data.messege
         })
-        localStorage.setItem("storeID",this.data.data._id)
+        localStorage.setItem("storeId",this.data.data._id)
         this.router.navigate(["/addFiles"])
       },err=>{
         Swal.fire({

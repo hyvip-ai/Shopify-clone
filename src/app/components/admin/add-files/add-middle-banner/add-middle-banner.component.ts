@@ -14,7 +14,10 @@ export class AddMiddleBannerComponent implements OnInit {
   banners:number = 0;
   data:any =     null
   ngOnInit(): void {
-
+    this.banner.getBannersbyPosition("middle").subscribe(res=>{
+      this.data=res;
+      this.banners = this.data.data.length;
+    })
   }
   middlebannerForm = new FormGroup({
     image:new FormControl("",[Validators.required]),

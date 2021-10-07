@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StoreService } from 'src/app/services/store/store.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private store:StoreService) { }
+  storename:string = "Shopify_Clone"
+  data:any = null
   ngOnInit(): void {
-  
+  this.store.getStoreName().subscribe(res=>{
+    console.log(res)
+    this.data = res;
+    this.storename = this.data.data.name
+  })
   }
 
 }

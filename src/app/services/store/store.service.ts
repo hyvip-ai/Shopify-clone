@@ -14,4 +14,7 @@ export class StoreService {
   editStore(storeName:any){
     return this.http.post(`${environment.baseUrl}/api/editStore`,storeName)
   }
+  getStoreName(){
+    return this.http.get(`${environment.baseUrl}/api/getStore/${localStorage.getItem("storeId")}`);
+  }
 }

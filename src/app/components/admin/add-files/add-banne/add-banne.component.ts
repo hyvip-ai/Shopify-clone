@@ -15,7 +15,7 @@ export class AddBanneComponent implements OnInit {
   data:any = null;
   ngOnInit(): void {
     this.banner.getBannersbyPosition("top").subscribe(res=>{
-      console.log(res)
+      // console.log(res)
       this.data = res
       this.banners = this.data.data.length;
     })

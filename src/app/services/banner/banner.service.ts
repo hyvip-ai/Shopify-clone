@@ -17,6 +17,14 @@ export class BannerService {
         }
       })
   }
+
+  getBannersbyPosition(position:string){
+    return this.http.get(`${environment.baseUrl}/api/getBanner/${localStorage.getItem("storeId")}/${position}`)
+  }
+
+  updateBanner(data:Banner){
+    return this.http.post(``,data);
+  }
   middleBanner:Banner={
     image:"https://images.unsplash.com/photo-1621951767587-b24334f11c65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
     head: "Image with text overlay" ,

@@ -11,4 +11,7 @@ export class StoreService {
   createStore(storeData:any){
     return this.http.post(`${environment.baseUrl}/api/createStore`,storeData)
   }
+  editStore(storeName:any){
+    return this.http.post(`${environment.baseUrl}/api/editStore`,storeName)
+  }
 }

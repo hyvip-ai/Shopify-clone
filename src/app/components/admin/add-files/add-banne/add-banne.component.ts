@@ -11,9 +11,14 @@ import Swal from 'sweetalert2';
 export class AddBanneComponent implements OnInit {
 
   constructor(private banner:BannerService) { }
-
+  banners:number = 0;
+  data:any = null;
   ngOnInit(): void {
-
+    this.banner.getBannersbyPosition("top").subscribe(res=>{
+      console.log(res)
+      this.data = res
+      this.banners = this.data.data.length;
+    })
   }
   bannerForm = new FormGroup({
     image:new FormControl("",[Validators.required]),
@@ -32,9 +37,17 @@ export class AddBanneComponent implements OnInit {
 
       }
       console.log(this.bannerForm.value);
-      this.banner.createBanner(this.bannerForm.value).subscribe(res=>{
-        console.log(res);
-      },err=>console.log(err))
+      if(this.banners==0){
+        this.banner.createBanner(this.bannerForm.value).subscribe(res=>{
+          console.log(res);
+    
+        },err=>console.log(err))
+      }
+      else{
+        this.banner.updateBanner(this.bannerForm.value).subscribe(res=>{
+          console.log(res)
+        },err=>console.log(err))
+      }
     }
     else{
       Swal.fire({

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { StoreService } from 'src/app/services/store.service';
+import { StoreService } from 'src/app/services/store/store.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -13,6 +13,9 @@ export class AddStoreComponent implements OnInit {
   data:any=null
   storeForm = new FormGroup({
     name:new FormControl("",[Validators.required])
+  })
+  editStoreForm = new FormGroup({
+    storeName:new FormControl("",[Validators.required])
   })
   constructor(private store:StoreService,private router:Router) { }
 
@@ -52,5 +55,33 @@ export class AddStoreComponent implements OnInit {
     // console.log(data)
     this.storeForm.get("name")?.setValue(data);
 
+  }
+  editStore(){
+    if(this.editStoreForm.invalid){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'You Must Enter A Store Name To Proceed!'
+      })
+    }
+    else{
+      console.log(this.editStoreForm.value)
+      this.store.editStore(this.editStoreForm.value).subscribe(res=>{
+        console.log(res);
+        this.data = res;
+        Swal.fire({
+          icon:'success',
+          title:this.data.messege
+        })
+        localStorage.setItem("storeID",this.data.data._id)
+        this.router.navigate(["/addFiles"])
+      },err=>{
+        Swal.fire({
+          icon:'error',
+          title:err.error.messege
+        })
+      })
+
+    }
   }
 }

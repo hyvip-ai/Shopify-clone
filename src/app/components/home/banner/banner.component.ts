@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { BannerService } from 'src/app/services/banner/banner.service';
 import { Banner } from 'src/app/shared/BannerCardDaa';
 
 @Component({
@@ -8,13 +9,25 @@ import { Banner } from 'src/app/shared/BannerCardDaa';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
-  @Input() bannerData:Banner={
+  constructor(private banner:BannerService) { }
+ bannerData:Banner={
     image:"",
     head:"",
     data:""
   }
+  @Input() position:string= ""
   ngOnInit(): void {
+    console.log(this.position)
+    if(this.position=="top"){
+         this.bannerData=this.banner.topBanner
+  }
+    else{
+     this.bannerData=this.banner.middleBanner
+
+    }
+    // this.banner.getBannersbyPosition(this.position).subscribe(res=>{
+    //   console.log(res)
+    // })
   }
 
 }

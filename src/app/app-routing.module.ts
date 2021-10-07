@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddFilesComponent } from './components/admin/add-files/add-files.component';
+import { FloatingButtonComponent } from './components/admin/add-files/floating-button/floating-button.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { ProductDetailsFormComponent } from './components/admin/product-details-form/product-details-form.component';
 import { CollectionsComponent } from './components/collections/collections.component';
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   {
     path:"addFiles",component:AddFilesComponent
+  },
+  {
+    path:"floating",component:FloatingButtonComponent
   }
 ];
 

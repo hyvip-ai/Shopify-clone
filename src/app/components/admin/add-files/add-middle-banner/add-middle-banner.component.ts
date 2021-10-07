@@ -11,13 +11,14 @@ import Swal from 'sweetalert2';
 export class AddMiddleBannerComponent implements OnInit {
 
   constructor(private banner:BannerService) { }
-
+  banners:number = 0;
+  data:any =     null
   ngOnInit(): void {
 
   }
   middlebannerForm = new FormGroup({
     image:new FormControl("",[Validators.required]),
-    head:new FormControl("",[Validators.required]),
+    head:new FormControl("",[Validators.required]),   
     data:new FormControl("",[Validators.required]) 
   })
   submitBannerForm(){

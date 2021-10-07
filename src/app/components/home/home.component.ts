@@ -9,10 +9,9 @@ import { Banner } from 'src/app/shared/BannerCardDaa';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private banner:BannerService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  heading:Banner=this.banner.topBanner
-  body:Banner=this.banner.middleBanner
+
 }

@@ -35,6 +35,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { AddTestimonialsComponent } from './components/admin/add-files/add-testimonials/add-testimonials.component';
 import { AddFeaturedImagesComponent } from './components/admin/add-files/add-featured-images/add-featured-images.component';
 import { AddStoreComponent } from './components/admin/add-store/add-store.component';
+import { FloatingButtonComponent } from './components/admin/add-files/floating-button/floating-button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +65,7 @@ import { AddStoreComponent } from './components/admin/add-store/add-store.compon
     AddTestimonialsComponent,
     AddFeaturedImagesComponent,
     AddStoreComponent,
+    FloatingButtonComponent,
   ],
   imports: [
     BrowserModule,

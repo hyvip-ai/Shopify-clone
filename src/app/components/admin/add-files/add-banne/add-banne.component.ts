@@ -46,6 +46,11 @@ export class AddBanneComponent implements OnInit {
       else{
         this.banner.updateBanner(this.bannerForm.value).subscribe(res=>{
           console.log(res)
+          this.data = res;
+          Swal.fire({
+            icon:'success',
+            title:this.data.messege
+          })
         },err=>console.log(err))
       }
     }

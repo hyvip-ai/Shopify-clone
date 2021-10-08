@@ -10,8 +10,32 @@ import { FeatureCard } from 'src/app/shared/Feature-card';
 export class FeatureCardsComponent implements OnInit {
 
   constructor(private featurecard:FeaturedcollectionService) { }
-
+  data:any = null
   ngOnInit(): void {
+    this.featurecard.getCollection().subscribe(res=>{
+      console.log(res)
+      this.data =  res;
+      if(this.data.data.length>0){
+       for(let item of this.data.data){
+        var myObj = {
+          image:"",
+          title:"",
+          data:"",
+        }
+        myObj.image = item.image;
+        myObj.title = item.title;
+        myObj.data = item.data;
+        this.featureCardsData.push(myObj);
+       }
+      }
+      else{
+      this.featureCardsData = this.featureCardsDataTemp
+
+      }
+    },err=>{
+      this.featureCardsData = this.featureCardsDataTemp
+    })
   }
-  featureCardsData:FeatureCard[]= this.featurecard.featuredColleactionData
+  featureCardsData:FeatureCard[]= [];
+  featureCardsDataTemp:FeatureCard[] = this.featurecard.featuredColleactionData
 }

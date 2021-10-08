@@ -18,7 +18,9 @@ font-size: calc(((15 - 1)/ (15)) * 1em);
 font-family: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
 color: #333232;
 }
-
+app-feature-card{
+    word-break: break-word;
+}
 @media (max-width:768px) {
     .col-md-4{
         margin-bottom: 40px;

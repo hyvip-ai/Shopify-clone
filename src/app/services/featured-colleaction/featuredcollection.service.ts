@@ -1,12 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FeatureCard } from 'src/app/shared/Feature-card';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FeaturedcollectionService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
   featuredColleactionData:FeatureCard[]=[
     {
       image:"https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHQlMjBzaGlydHxlbnwwfDF8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
@@ -24,4 +26,10 @@ export class FeaturedcollectionService {
       data:"Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs."
     },
   ]
+  getCollection(){
+    return this.http.get(`${environment.baseUrl}/api/getAllCollection/${localStorage.getItem("storeId")}`);
+  }
+  postCollection(data:FeatureCard){
+    return this.http.post(`${environment.baseUrl}/api/postCollectionItem/${localStorage.getItem("storeId")}`,data);
+  }
 }

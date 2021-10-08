@@ -1,5 +1,5 @@
 <h1 style="margin-bottom: 20px;">{{heading}}</h1>
-
+<h6 *ngIf="testimonials>0">{{testimonials}} Testimonials Have already Been Added</h6>
 <div type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalTestimonials" class="add"><i class="fas fa-plus"></i></div>
   <div class="modal fade" id="exampleModalTestimonials" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelTestimonials" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -21,15 +21,18 @@
               <input formControlName="designation" class="form-control" type="text" name="" id="head">
             </div>
             <div class="form-group">
+              <label for="head">Image<span class="required">*</span></label>
+              <input formControlName="image" class="form-control" type="text" name="" id="image">
+            </div>
+            <div class="form-group">
               <label for="data">Testimonial <span class="required"></span>*</label>
               <input formControlName="data" class="form-control" type="text" name="" id="data">
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-info" (click)="getData()">Submit Data</button>
-          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-       
+          <button type="button" class="btn btn-outline-info" data-dismiss="modal" (click)="getData()">Submit Data</button>
+     
         </div>
       </div>
     </div>

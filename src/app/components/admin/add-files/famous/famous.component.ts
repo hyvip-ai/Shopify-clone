@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { FeatureService } from 'src/app/services/feature/feature.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-famous',
@@ -8,20 +10,40 @@ import { FormControl, FormControlName, FormGroup, Validators } from '@angular/fo
 })
 export class FamousComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private featureService:FeatureService) { }
+  features:number = 0;
+  data:any = null;
   ngOnInit(): void {
+      this.featureService.getAllFeatures().subscribe(res=>{
+      this.data = res;
+      this.features = this.data.data.length;
+
+    })
   }
   famousForm = new FormGroup({
-    imageUrl:new FormControl("",[Validators.required]),
-    title:new FormControl("",[Validators.required]),
+    image:new FormControl("",[Validators.required]),
+    head:new FormControl("",[Validators.required]),
     data:new FormControl("",[Validators.required])
   })
   submitFamousForm(){
-    console.log(this.famousForm.value);
-    this.famousForm.get("imageUrl")?.setValue("");
-    this.famousForm.get("title")?.setValue("");
-    this.famousForm.get("data")?.setValue("");
+    
+    if(this.famousForm.valid){
+      this.featureService.postNewFeature(this.famousForm.value).subscribe(res=>{
+      console.log(res);
+      this.data = res;
+      Swal.fire({
+        icon:"success",
+        title:this.data.messege
+      })
+      })
+    }
+    else{
+      Swal.fire({
+        icon:"error",
+        title: 'Enter Valid Details'
+      })
+    }
+ 
   }
   @Input() heading:string=""
 }

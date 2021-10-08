@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { ProductsService } from 'src/app/services/featured-products/products.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-product-details-form',
   templateUrl: './product-details-form.component.html',
@@ -11,9 +14,10 @@ export class ProductDetailsFormComponent implements OnInit {
     name:new FormControl("",[Validators.required]),
     price:new FormControl("",[Validators.required]),
     availability:new FormControl("",[Validators.required]),
-    details:new FormControl("",[Validators.required])
+    details:new FormControl("",[Validators.required]),
+    image:new FormControl("",[Validators.required])
   })
-  constructor() { }
+  constructor(private productService:ProductsService,private router:Router) { }
   editorConfig: AngularEditorConfig = {
     editable: true,
       spellcheck: true,
@@ -58,9 +62,28 @@ export class ProductDetailsFormComponent implements OnInit {
       ['fontSize']
     ]
 };
+data:any  =null
   ngOnInit(): void {
   }
   addProduct(){
     console.log(this.productForm.value)
+    if(this.productForm.valid){
+      this.productService.addNewProduct(this.productForm.value).subscribe(res=>{
+        console.log(res);
+        this.data = res;
+        Swal.fire({
+          icon:'success',
+          title:this.data.messege
+        })
+        this.router.navigate(["/addFiles"])
+      })
+     
+    }
+    else{
+      Swal.fire({
+        icon:'error',
+        title:"Enter Valid Details"
+      })
+    }
   }
 }

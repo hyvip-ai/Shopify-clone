@@ -11,11 +11,13 @@ export class TestimonialComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.testimonialsData)
   }
   @Input() testimonialsData:Testimonials = {
     name:"",
     data:"",
-    designation:""
+    designation:"",
+    image:""
   }
 
 }

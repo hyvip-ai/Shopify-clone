@@ -2,10 +2,28 @@
     <h1 style="text-align: center;margin: 25px;">Testimonials</h1>
     <div class="row">
         <div class="col-md-12">
-            <div id="testimonial-slider" class="owl-carousel">
+            <!-- <div *ngIf="TestimonaislData" id="testimonial-slider" class="owl-carousel">
                 <app-testimonial *ngFor="let item of TestimonaislData" [testimonialsData]="item" class="testimonial">
                 </app-testimonial>
-            </div>
+            </div> -->
+            <!-- <div id="testimonial-slider" class="owl-carousel">
+                <div class="testimonial" *ngFor="let item of TestimonialsDataTemp">
+                    <p class="description">
+                       {{item.data}}
+                    </p>
+                    <div class="pic">
+                        <img src="{{item.image}}" alt="">
+                    </div>
+                    <h3 class="title">{{item.name}}</h3>
+                    <span class="post">{{item.designation}}</span>
+                </div>
+            </div> -->
+
+        <div class="row justify-content-around">
+            <app-testimonial class="testimonial" *ngFor="let item of TestimonialslData" [testimonialsData]="item">
+              
+            </app-testimonial>
+        </div>
         </div>
     </div>
 </div>

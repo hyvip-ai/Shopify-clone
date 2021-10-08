@@ -1,12 +1,20 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FeatureProductCard } from 'src/app/shared/feature-product-cards';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+  addNewProduct(data:FeatureProductCard){
+    return this.http.post(`${environment.baseUrl}/api/postProduct/${localStorage.getItem("storeId")}`,data)
+  }
+  getProducts(){
+    return this.http.get(`${environment.baseUrl}/api/getProducts/${localStorage.getItem("storeId")}`)
+  }
   productsData:FeatureProductCard[]= [
     {
       image:`https://images.unsplash.com/photo-1577733966973-d680bffd2e80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80`,

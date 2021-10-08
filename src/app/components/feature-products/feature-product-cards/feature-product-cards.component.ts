@@ -13,6 +13,7 @@ export class FeatureProductCardsComponent implements OnInit {
   constructor(private sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
+    console.log(this.productData)
     
   }
   @Input() productData:FeatureProductCard = {

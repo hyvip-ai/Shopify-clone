@@ -10,11 +10,34 @@ import { FeatureProductCard } from 'src/app/shared/feature-product-cards';
 export class FeatureProductsComponent implements OnInit {
 
   constructor(private service:ProductsService) { }
-
+  data:any = null
   ngOnInit(): void {
-  }
+    this.service.getProducts().subscribe(res=>{
+      this.data = res;
+      if(this.data.data.length>0){
+          for(let item of this.data.data){
+            var myobj = {
+              image:"",
+              name:"",
+              price:""
+            }
+            myobj.image = item.image;
+            myobj.name = item.name;
+            myobj.price = item.price;
+            this.productDetails.push(myobj)
+          }
+          console.log(this.productDetails)
+      }
+      else{
+      this.productDetails = this.productDetailsTemp
 
-  productDetails:FeatureProductCard[] = this.service.productsData 
+      }
+    },err=>{
+      this.productDetails = this.productDetailsTemp
+        })
+  }
+  productDetails:FeatureProductCard[] = []
+  productDetailsTemp:FeatureProductCard[] = this.service.productsData 
   getProductDetails(name:string){
     console.log(name);
   }

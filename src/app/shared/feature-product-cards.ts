@@ -1,5 +1,7 @@
 export interface FeatureProductCard{
     image:string,
     name:string,
-    price:number
+    price:string|number,
+    description?:string,
+    availability?:number|string
 }

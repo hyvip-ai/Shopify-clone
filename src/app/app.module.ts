@@ -36,6 +36,7 @@ import { AddTestimonialsComponent } from './components/admin/add-files/add-testi
 import { AddFeaturedImagesComponent } from './components/admin/add-files/add-featured-images/add-featured-images.component';
 import { AddStoreComponent } from './components/admin/add-store/add-store.component';
 import { FloatingButtonComponent } from './components/admin/add-files/floating-button/floating-button.component';
+import { SearchPageComponent } from './components/search-page/search-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +67,7 @@ import { FloatingButtonComponent } from './components/admin/add-files/floating-b
     AddFeaturedImagesComponent,
     AddStoreComponent,
     FloatingButtonComponent,
+    SearchPageComponent,
   ],
   imports: [
     BrowserModule,

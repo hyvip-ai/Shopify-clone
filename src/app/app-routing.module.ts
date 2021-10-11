@@ -6,6 +6,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ProductDetailsFormComponent } from './components/admin/product-details-form/product-details-form.component';
 import { CollectionsComponent } from './components/collections/collections.component';
 import { HomeComponent } from './components/home/home.component';
+import { SearchPageComponent } from './components/search-page/search-page.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path:"addFiles",component:AddFilesComponent
+  },
+  {
+    path:"search",component:SearchPageComponent
   }
 ];
 

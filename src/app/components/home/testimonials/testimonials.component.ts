@@ -33,55 +33,7 @@ export class TestimonialsComponent implements OnInit,AfterViewInit {
       name:"Kristina",
       designation:"Web Developer",
       data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
-    {
-      image:"https://i.ibb.co/RzhdmkC/image.png",
-      name:"Kristina",
-      designation:"Web Developer",
-      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
-    {
-      image:"https://i.ibb.co/pP5G5Zx/image.png",
-      name:"Kristina",
-      designation:"Web Developer",
-      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
-    {
-      image:"https://i.ibb.co/RzhdmkC/image.png",
-      name:"Kristina",
-      designation:"Web Developer",
-      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
-    {
-      image:"https://i.ibb.co/pP5G5Zx/image.png",
-      name:"Kristina",
-      designation:"Web Developer",
-      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
-    {
-      image:"https://i.ibb.co/RzhdmkC/image.png",
-      name:"Kristina",
-      designation:"Web Developer",
-      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
-    {
-      image:"https://i.ibb.co/pP5G5Zx/image.png",
-      name:"Kristina",
-      designation:"Web Developer",
-      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
-    {
-      image:"https://i.ibb.co/RzhdmkC/image.png",
-      name:"Kristina",
-      designation:"Web Developer",
-      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
-    {
-      image:"https://i.ibb.co/pP5G5Zx/image.png",
-      name:"Kristina",
-      designation:"Web Developer",
-      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
+    }
     
   ]
   data:any = null

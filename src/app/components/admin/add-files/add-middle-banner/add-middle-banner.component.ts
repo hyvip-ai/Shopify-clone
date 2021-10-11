@@ -36,9 +36,27 @@ export class AddMiddleBannerComponent implements OnInit {
 
       }
       console.log(this.middlebannerForm.value);
-      this.banner.createBanner(this.middlebannerForm.value).subscribe(res=>{
-        console.log(res);
-      },err=>console.log(err))
+      if(this.banners==0){
+        this.banner.createBanner(this.middlebannerForm.value).subscribe(res=>{
+          console.log(res);
+          this.data = res;
+          Swal.fire({
+            icon: 'success',
+            title: this.data.messege,
+           
+          })
+        },err=>console.log(err))
+      }
+      else{
+        this.banner.updateBanner(this.middlebannerForm.value).subscribe(res=>{
+          console.log(res)
+          this.data = res;
+          Swal.fire({
+            icon:'success',
+            title:this.data.messege
+          })
+        },err=>console.log(err))
+      }
     }
     else{
       Swal.fire({

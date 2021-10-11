@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
 import { AddFilesComponent } from './components/admin/add-files/add-files.component';
 import { FloatingButtonComponent } from './components/admin/add-files/floating-button/floating-button.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -25,7 +26,7 @@ const routes: Routes = [
     path:"addProductDetails",component:ProductDetailsFormComponent
   },
   {
-    path:"addFiles",component:AddFilesComponent
+    path:"addFiles",component:AddFilesComponent,canActivate:[AuthGuard]
   },
   {
     path:"search",component:SearchPageComponent

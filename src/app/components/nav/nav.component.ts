@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { StoreService } from 'src/app/services/store/store.service';
 
@@ -9,7 +10,9 @@ import { StoreService } from 'src/app/services/store/store.service';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private store:StoreService,private router:Router) { }
+  constructor(private store:StoreService,private router:Router,private title:Title) { 
+
+  }
   storename:string = "Shopify_Clone"
   data:any = null
   ngOnInit(): void {
@@ -17,7 +20,8 @@ export class NavComponent implements OnInit {
     console.log(res)
     this.data = res;
     this.storename = this.data.data.name
-  })
+    this.title.setTitle(this.storename)
+  },err=>this.title.setTitle("Shopify_Clone"))
   }
   editingOpen(){
     if(localStorage.getItem("storeId")){

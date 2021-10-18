@@ -1,14 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BannerService } from 'src/app/services/banner/banner.service';
 import { Banner } from 'src/app/shared/BannerCardDaa';
 
 @Component({
-  selector: 'app-edit-delete-banner',
-  templateUrl: './edit-delete-banner.component.html',
-  styleUrls: ['./edit-delete-banner.component.css']
+  selector: 'app-edit-delete-middle-banner',
+  templateUrl: './edit-delete-middle-banner.component.html',
+  styleUrls: ['./edit-delete-middle-banner.component.css']
 })
-export class EditDeleteBannerComponent implements OnInit {
+export class EditDeleteMiddleBannerComponent implements OnInit {
 
   constructor(private banner:BannerService) { }
   data:any = null
@@ -17,7 +17,7 @@ export class EditDeleteBannerComponent implements OnInit {
     head:"",
     data:""
   }
-  position:string= "top"
+  position:string= "middle"
   ngOnInit(): void {
     this.banner.getBannersbyPosition(this.position).subscribe(res=>{
       console.log(res);
@@ -28,14 +28,15 @@ export class EditDeleteBannerComponent implements OnInit {
       this.bannerData.data = this.data.data
     })
   }
-  bannerEditForm:FormGroup =new FormGroup({
+
+  bannermiddleEditForm:FormGroup =new FormGroup({
     image:new FormControl("",[Validators.required]),
     head:new FormControl("",[Validators.required]),
     data:new FormControl("",[Validators.required])
   })
-  submitForm(){
-    console.log(this.bannerEditForm.value)
-    this.banner.updateWholeBanner(this.bannerEditForm.value,this.position).subscribe(res=>{
+  submitMiddleForm(){
+    console.log(this.bannermiddleEditForm.value)
+    this.banner.updateWholeBanner(this.bannermiddleEditForm.value,this.position).subscribe(res=>{
       this.data = res
       this.bannerData.image = this.data.data.image
       this.bannerData.data = this.data.data.data;
@@ -43,4 +44,5 @@ export class EditDeleteBannerComponent implements OnInit {
       location.reload()
     })
   }
+
 }

@@ -1,0 +1,19 @@
+.col-md-4{
+    padding: 0;
+    
+}
+app-edit-delete-image-single{
+    width: 32%;
+    height: 475px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+@media (max-width:768px) {
+    app-edit-delete-image-single{
+        height: 360px;
+        width: 80%;
+        margin: 25px 0px;
+    }
+}
+

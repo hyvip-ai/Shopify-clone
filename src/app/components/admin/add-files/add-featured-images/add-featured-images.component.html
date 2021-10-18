@@ -20,7 +20,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-info" data-dismiss="modal" (click)="submitImageForm()">Submit Data</button>
-         
+         <button *ngIf="features>0" type="button" class="btn btn-outline-primary" data-dismiss="modal" routerLink="/editorDeleteImageSection">Edit/Delete Image</button>
         </div>
       </div>
     </div>

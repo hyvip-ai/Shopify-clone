@@ -38,6 +38,9 @@ import { AddStoreComponent } from './components/admin/add-store/add-store.compon
 import { FloatingButtonComponent } from './components/admin/add-files/floating-button/floating-button.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { EditDeleteBannerComponent } from './components/admin/edit-files/edit-delete-banner/edit-delete-banner.component';
+import { EditDeleteMiddleBannerComponent } from './components/admin/edit-files/edit-delete-middle-banner/edit-delete-middle-banner.component';
+import { EditDeleteFeatureImageComponent } from './components/admin/edit-files/edit-delete-feature-image/edit-delete-feature-image.component';
+import { EditDeleteImageSingleComponent } from './components/admin/edit-files/edit-delete-feature-image/edit-delete-image-single/edit-delete-image-single.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +73,9 @@ import { EditDeleteBannerComponent } from './components/admin/edit-files/edit-de
     FloatingButtonComponent,
     SearchPageComponent,
     EditDeleteBannerComponent,
+    EditDeleteMiddleBannerComponent,
+    EditDeleteFeatureImageComponent,
+    EditDeleteImageSingleComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,4 +16,7 @@ export class FeaturedImagesService {
   getAllImages(){
     return this.http.get(`${environment.baseUrl}/api/getAllImages/${localStorage.getItem("storeId")}`);
   }
+  deleteImage(id:string){
+    return this.http.get(`${environment.baseUrl}/api/deleteAnImage/${localStorage.getItem("storeId")}/${id}`)
+  }
 }

@@ -37,6 +37,7 @@ import { AddFeaturedImagesComponent } from './components/admin/add-files/add-fea
 import { AddStoreComponent } from './components/admin/add-store/add-store.component';
 import { FloatingButtonComponent } from './components/admin/add-files/floating-button/floating-button.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
+import { EditDeleteBannerComponent } from './components/admin/edit-files/edit-delete-banner/edit-delete-banner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import { SearchPageComponent } from './components/search-page/search-page.compon
     AddStoreComponent,
     FloatingButtonComponent,
     SearchPageComponent,
+    EditDeleteBannerComponent,
   ],
   imports: [
     BrowserModule,

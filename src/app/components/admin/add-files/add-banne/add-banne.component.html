@@ -27,6 +27,7 @@
           </form>
         </div>
         <div class="modal-footer">
+          <button *ngIf="banners>0" type="button" class="btn btn-outline-primary" routerLink="/editordeleteBanner" data-dismiss="modal">Edit/Delete Banner</button>
           <button type="button" class="btn btn-outline-info" (click)="submitBannerForm()" data-dismiss="modal">Submit Data</button>
         </div>
       </div>

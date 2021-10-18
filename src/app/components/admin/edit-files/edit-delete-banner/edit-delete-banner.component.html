@@ -1,0 +1,13 @@
+<div class="banner" *ngIf="bannerData">
+    <div class="banner_bg_img">
+        <img src="{{bannerData.image}}" alt="Banner Image">
+        </div>
+        <div class="banner_bg_overlay">
+            <h2>{{bannerData.head}}</h2>
+            <p>{{bannerData.data}}</p>
+        </div>
+</div>
+<div class="button">
+    <button class="btn btn-outline-danger">Delete Banner</button>
+    <button class="btn btn-outline-primary">Edit Banner</button>
+</div>

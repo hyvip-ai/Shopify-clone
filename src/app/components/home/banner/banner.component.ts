@@ -22,7 +22,8 @@ export class BannerComponent implements OnInit {
       console.log(res)
       this.data = res;
    
-    if(this.data.data.length>0){    this.data = this.data.data[0];
+    if(this.data.data.length>0){ 
+        this.data = this.data.data[0];
         this.bannerData.image = this.data.image;
         this.bannerData.head = this.data.head;
         this.bannerData.data = this.data.data

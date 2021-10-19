@@ -15,6 +15,9 @@ export class ProductsService {
   getProducts(){
     return this.http.get(`${environment.baseUrl}/api/getProducts/${localStorage.getItem("storeId")}`)
   }
+  deleteProduct(id:string){
+    return this.http.get(`${environment.baseUrl}/api/deleteProducts/${localStorage.getItem("storeId")}/${id}`)
+  }
   productsData:FeatureProductCard[]= [
     {
       image:`https://images.unsplash.com/photo-1577733966973-d680bffd2e80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80`,

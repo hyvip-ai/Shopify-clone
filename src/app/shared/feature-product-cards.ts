@@ -3,5 +3,6 @@ export interface FeatureProductCard{
     name:string,
     price:string|number,
     description?:string,
-    availability?:number|string
+    availability?:number|string,
+    id?:string
 }

@@ -1,1 +1,17 @@
-<p>edit-delete-a-product-card works!</p>
+      
+ <div class="image">
+    <img src="{{productData.image}}" alt="Product">
+      <div class="overlay"></div> 
+      <div class="button">
+        <button (click)="deleteProduct()">Delete</button>
+        <button href="#">Edit</button>
+      </div>            
+ </div>
+<div class="description">
+                  
+    <h6 class="name">{{productData.name}}</h6>
+    <p class="price">Rs. {{productData.price}}</p>
+                 
+              
+</div>
+       

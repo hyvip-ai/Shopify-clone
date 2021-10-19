@@ -21,11 +21,13 @@ export class EditDeleteProductsComponent implements OnInit {
             var myobj = {
               image:"",
               name:"",
-              price:""
+              price:"",
+              id:""
             }
             myobj.image = item.image;
             myobj.name = item.name;
             myobj.price = item.price;
+            myobj.id = item._id
             this.productDetails.push(myobj)
           }
           console.log(this.productDetails)

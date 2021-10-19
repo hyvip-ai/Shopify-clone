@@ -19,7 +19,7 @@ export class FeaturedImagesService {
   deleteImage(id:string){
     return this.http.get(`${environment.baseUrl}/api/deleteAnImage/${localStorage.getItem("storeId")}/${id}`)
   }
-  editFeatureImages(id:any,data:Images){
+  editFeatureImages(id:string,data:Images){
     return this.http.post(`${environment.baseUrl}/api/editImage/${localStorage.getItem("storeId")}/${id}`,data);
   }
 }

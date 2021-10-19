@@ -23,6 +23,7 @@ export class EditDeleteFeatureImageComponent implements OnInit {
             };
             myobj.image = item.image;
             myobj.id = item._id
+            console.log(myobj.id)
             this.images.push(myobj);
           }
     })

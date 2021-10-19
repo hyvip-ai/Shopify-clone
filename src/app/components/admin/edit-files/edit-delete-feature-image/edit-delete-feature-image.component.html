@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <h1 style="text-align: center;margin: 25px auto;">Featured</h1>
     <div class="row justify-content-around" *ngIf="images">
-        <app-edit-delete-image-single *ngFor="let item of images" [id]="item.id" [img]="item.image"></app-edit-delete-image-single>
+        <app-edit-delete-image-single *ngFor="let item of images" [id]="item.id!" [img]="item.image"></app-edit-delete-image-single>
     </div>
 </div>

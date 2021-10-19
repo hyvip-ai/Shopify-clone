@@ -1,4 +1,4 @@
 export interface Images{
     image:string
-    id?:any
+    id?:string
 }

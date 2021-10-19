@@ -63,7 +63,14 @@ export class ProductDetailsFormComponent implements OnInit {
     ]
 };
 data:any  =null
+products:number = 0
   ngOnInit(): void {
+    this.productService.getProducts().subscribe(res=>{
+      this.data = res;
+      console.log(res)
+      this.products = this.data.data.length
+      console.log(this.products)
+    })
   }
   addProduct(){
     console.log(this.productForm.value)

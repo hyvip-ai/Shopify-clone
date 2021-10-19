@@ -26,6 +26,8 @@ export class EditDeleteFeatureImageComponent implements OnInit {
             console.log(myobj.id)
             this.images.push(myobj);
           }
+    },err=>{
+      this.images = this.imageservice.myImages
     })
   }
 

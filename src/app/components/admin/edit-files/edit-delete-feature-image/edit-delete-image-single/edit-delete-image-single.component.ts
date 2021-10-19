@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FeaturedImagesService } from 'src/app/services/featured-images/featured-images.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-delete-image-single',
@@ -19,11 +20,19 @@ export class EditDeleteImageSingleComponent implements OnInit {
   @Input() img:string=""
   @Input() id:string= ""
   deleteId(){
-    console.log(this.id)
-    this.imageService.deleteImage(this.id).subscribe(res=>{
-      console.log(res);
-      location.reload()
-    })
+    if(this.id){
+      console.log(this.id)
+      this.imageService.deleteImage(this.id).subscribe(res=>{
+        console.log(res);
+        location.reload()
+      })
+    }
+    else{
+      Swal.fire({
+        icon:"error",
+        title:"This Image Doesn't Exist"
+      })
+    }
   }
   editImage(){
     console.log(this.id)

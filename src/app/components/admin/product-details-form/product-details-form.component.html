@@ -24,5 +24,5 @@
     <angular-editor formControlName="details" [placeholder]="'Enter text here...'"></angular-editor>
  </form>
  <button class="d-block btn btn-outline-info mt-2" (click)="addProduct()">Add Product</button>
- <button class="btn btn-outline-primary mt-2" routerLink="/editOrDeleteProducts">Edit/Delete Products</button>
+ <button class="btn btn-outline-primary mt-2" *ngIf="products>0" routerLink="/editOrDeleteProducts">Edit/Delete Products</button>
 </div>

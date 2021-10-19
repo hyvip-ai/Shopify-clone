@@ -1,0 +1,27 @@
+h1{
+    margin: 55px auto;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.myproductcard{
+    width: 24%;
+}
+.row{
+    justify-content: space-evenly;
+}
+app-feature-product-cards{
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+@media (max-width:768px) {
+    .myproductcard{
+        width: 45%;
+    }
+}
+@media (max-width:496px) {
+    .myproductcard{
+        width: 80%;
+    }
+}

@@ -8,7 +8,7 @@
         </div>
 </div>
 <div class="button">
-    <button class="btn btn-outline-danger">Delete Banner</button>
+    <button class="btn btn-outline-danger" (click)="deleteTopBanner()">Delete Banner</button>
     <button class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Edit Banner</button>
 </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -37,7 +37,7 @@
         </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="submitMiddleForm()" data-dismiss="modal">Edit Modal</button>
+          <button type="button" class="btn btn-secondary" (click)="submitMiddleForm()" data-dismiss="modal">Edit Banner</button>
         </div>
       </div>
     </div>

@@ -7,9 +7,11 @@ import { AdminComponent } from './components/admin/admin.component';
 import { EditDeleteBannerComponent } from './components/admin/edit-files/edit-delete-banner/edit-delete-banner.component';
 import { EditDeleteFeatureImageComponent } from './components/admin/edit-files/edit-delete-feature-image/edit-delete-feature-image.component';
 import { EditDeleteMiddleBannerComponent } from './components/admin/edit-files/edit-delete-middle-banner/edit-delete-middle-banner.component';
+import { EditDeleteProductsComponent } from './components/admin/edit-files/edit-delete-products/edit-delete-products.component';
 import { ProductDetailsFormComponent } from './components/admin/product-details-form/product-details-form.component';
 import { CollectionsComponent } from './components/collections/collections.component';
 import { HomeComponent } from './components/home/home.component';
+import { ImageModalComponent } from './components/image-modal/image-modal.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 
 const routes: Routes = [
@@ -42,6 +44,12 @@ const routes: Routes = [
   },
   {
     path:"editorDeleteImageSection",component:EditDeleteFeatureImageComponent
+  },
+  {
+    path:"image-modal",component:ImageModalComponent
+  },
+  {
+    path:"editOrDeleteProducts",component:EditDeleteProductsComponent
   }
 ];
 

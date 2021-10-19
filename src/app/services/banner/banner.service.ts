@@ -28,6 +28,9 @@ export class BannerService {
   updateWholeBanner(data:Banner,position:string){
     return this.http.post(`${environment.baseUrl}/api/editBanner/${localStorage.getItem("storeId")}/${position}`,data);
   }
+  deleteBanner(bannerId:any){
+    return this.http.get(`${environment.baseUrl}/api/deleteBanner/${localStorage.getItem("storeId")}/${bannerId}`);
+  }
   middleBanner:Banner={
     image:"https://images.unsplash.com/photo-1621951767587-b24334f11c65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
     head: "Image with text overlay" ,

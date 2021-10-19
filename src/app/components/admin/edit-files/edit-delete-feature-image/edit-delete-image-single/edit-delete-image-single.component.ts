@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FeaturedImagesService } from 'src/app/services/featured-images/featured-images.service';
 
 @Component({
@@ -12,6 +13,9 @@ export class EditDeleteImageSingleComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  featureImageEditForm=new FormGroup({
+    image:new FormControl("",[Validators.required])
+  })
   @Input() img:string=""
   @Input() id:string= ""
   deleteId(){
@@ -19,6 +23,13 @@ export class EditDeleteImageSingleComponent implements OnInit {
     this.imageService.deleteImage(this.id).subscribe(res=>{
       console.log(res);
       location.reload()
+    })
+  }
+  editImage(){
+    console.log(this.id)
+    this.imageService.editFeatureImages(this.id,this.featureImageEditForm.value).subscribe(res=>{
+      console.log(res);
+      location.reload();
     })
   }
 }

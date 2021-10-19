@@ -2,7 +2,32 @@
     <img src="{{img}}" alt="Featured Image">
     <div class="overlay"></div>
     <div class="button">
-        <a style="cursor: pointer;"> Edit </a> <br>
+        <a style="cursor: pointer;" data-toggle="modal" attr.data-target="#exampleModalFeatureImageEditTop{{id}}"> Edit </a> <br>
         <a (click)="deleteId()" style="cursor: pointer;">Delete</a>
     </div>
 </div>
+
+<div class="modal fade" id="exampleModalFeatureImageEditTop{{id}}" tabindex="-1" role="dialog" attr.aria-labelledby="exampleModalFeatureImageEditTopLabel{{id}}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalFeatureImageEditTopLabel{{id}}">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <form [formGroup]="featureImageEditForm">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Image URL</label>
+                <input type="text" formControlName="image" class="form-control" id="exampleFormControlInput11" placeholder="Enter Image URL">
+              </div>
+            
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="editImage()" data-dismiss="modal">Edit Image</button>
+        </div>
+      </div>
+    </div>
+  </div>

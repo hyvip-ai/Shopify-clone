@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-floating-button',
@@ -11,5 +11,6 @@ export class FloatingButtonComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  @Input() data:string = ""
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BannerService } from 'src/app/services/banner/banner.service';
 import { Banner } from 'src/app/shared/BannerCardDaa';
 
@@ -9,9 +10,17 @@ import { Banner } from 'src/app/shared/BannerCardDaa';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+  editingPageOpen(){
+    if(localStorage.getItem("storeId")){
+      this.router.navigate(["/addFiles"])
+    }
+    else{
+      this.router.navigate(["/admin"])
+    }
   }
 
 }

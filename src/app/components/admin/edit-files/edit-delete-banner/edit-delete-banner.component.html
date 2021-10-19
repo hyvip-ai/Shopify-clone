@@ -8,14 +8,14 @@
         </div>
 </div>
 <div class="button">
-    <button class="btn btn-outline-danger">Delete Banner</button>
-    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Edit Banner</button>
+    <button class="btn btn-outline-danger" (click)="deleteTopBanner()">Delete Banner</button>
+    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalBannerEditTop">Edit Banner</button>
 </div>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModalBannerEditTop" tabindex="-1" role="dialog" aria-labelledby="exampleModalBannerEditTopLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalBannerEditTopLabel">Modal title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -37,7 +37,7 @@
         </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="submitForm()" data-dismiss="modal">Edit Modal</button>
+          <button type="button" class="btn btn-secondary" (click)="submitForm()" data-dismiss="modal">Edit Banner</button>
         </div>
       </div>
     </div>

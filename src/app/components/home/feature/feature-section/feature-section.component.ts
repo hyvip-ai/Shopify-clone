@@ -19,5 +19,6 @@ export class FeatureSectionComponent implements OnInit {
     data:""
   }
   @Input() index:number=0
+  
 
 }

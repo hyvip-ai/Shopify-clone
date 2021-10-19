@@ -41,6 +41,9 @@ import { EditDeleteBannerComponent } from './components/admin/edit-files/edit-de
 import { EditDeleteMiddleBannerComponent } from './components/admin/edit-files/edit-delete-middle-banner/edit-delete-middle-banner.component';
 import { EditDeleteFeatureImageComponent } from './components/admin/edit-files/edit-delete-feature-image/edit-delete-feature-image.component';
 import { EditDeleteImageSingleComponent } from './components/admin/edit-files/edit-delete-feature-image/edit-delete-image-single/edit-delete-image-single.component';
+import { ImageModalComponent } from './components/image-modal/image-modal.component';
+import { EditDeleteProductsComponent } from './components/admin/edit-files/edit-delete-products/edit-delete-products.component';
+import { EditDeleteAProductCardComponent } from './components/admin/edit-files/edit-delete-products/edit-delete-a-product-card/edit-delete-a-product-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,6 +79,9 @@ import { EditDeleteImageSingleComponent } from './components/admin/edit-files/ed
     EditDeleteMiddleBannerComponent,
     EditDeleteFeatureImageComponent,
     EditDeleteImageSingleComponent,
+    ImageModalComponent,
+    EditDeleteProductsComponent,
+    EditDeleteAProductCardComponent,
   ],
   imports: [
     BrowserModule,

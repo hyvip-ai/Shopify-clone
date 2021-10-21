@@ -32,4 +32,7 @@ export class FeaturedcollectionService {
   postCollection(data:FeatureCard){
     return this.http.post(`${environment.baseUrl}/api/postCollectionItem/${localStorage.getItem("storeId")}`,data);
   }
+  deleteCollection(id:string){
+    return this.http.get(`${environment.baseUrl}/api/deleteCollection/${localStorage.getItem("storeId")}/${id}`);
+  }
 }

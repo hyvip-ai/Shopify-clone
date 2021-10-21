@@ -44,6 +44,13 @@ import { EditDeleteImageSingleComponent } from './components/admin/edit-files/ed
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
 import { EditDeleteProductsComponent } from './components/admin/edit-files/edit-delete-products/edit-delete-products.component';
 import { EditDeleteAProductCardComponent } from './components/admin/edit-files/edit-delete-products/edit-delete-a-product-card/edit-delete-a-product-card.component';
+import { EditDeleteTestimonialsComponent } from './components/admin/edit-files/edit-delete-testimonials/edit-delete-testimonials.component';
+import { ProductDetailsComponent } from './components/home/product-details/product-details.component';
+import { EditSingleTestimonialComponent } from './components/admin/edit-files/edit-delete-testimonials/edit-single-testimonial/edit-single-testimonial.component';
+import { EditDeleteFamousProductsComponent } from './components/admin/edit-files/edit-delete-famous-products/edit-delete-famous-products.component';
+import { EditDeleteFamousProductComponent } from './components/admin/edit-files/edit-delete-famous-products/edit-delete-famous-product/edit-delete-famous-product.component';
+import { EditDeleteCollectionsComponent } from './components/admin/edit-files/edit-delete-collections/edit-delete-collections.component';
+import { EditDeleteCollectionComponent } from './components/admin/edit-files/edit-delete-collections/edit-delete-collection/edit-delete-collection.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,6 +89,13 @@ import { EditDeleteAProductCardComponent } from './components/admin/edit-files/e
     ImageModalComponent,
     EditDeleteProductsComponent,
     EditDeleteAProductCardComponent,
+    EditDeleteTestimonialsComponent,
+    ProductDetailsComponent,
+    EditSingleTestimonialComponent,
+    EditDeleteFamousProductsComponent,
+    EditDeleteFamousProductComponent,
+    EditDeleteCollectionsComponent,
+    EditDeleteCollectionComponent,
   ],
   imports: [
     BrowserModule,

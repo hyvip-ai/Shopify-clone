@@ -1,0 +1,15 @@
+
+
+            <div class="mycard">
+                <div class="image">
+                    <img src="{{cardData.image}}" alt="Product Card">
+                </div>
+                <div class="description" style="text-align: center;">
+                    <h3>{{cardData.title}}</h3>
+                    <p>{{cardData.data}}</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button" class="btn btn-outline-primary">Edit</button>
+                <button type="button" class="btn btn-outline-danger" (click)="deleteItem()">Delete</button>
+            </div>

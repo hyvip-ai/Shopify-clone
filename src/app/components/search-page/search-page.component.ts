@@ -8,11 +8,13 @@ import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor(private aroute:ActivatedRoute) { }
+  constructor(private aroute:ActivatedRoute) {
+    window.scrollTo(0,0)
+   }
 
   ngOnInit(): void {
     console.log(this.aroute.snapshot.params.id)
- 
+    
   }
 
 }

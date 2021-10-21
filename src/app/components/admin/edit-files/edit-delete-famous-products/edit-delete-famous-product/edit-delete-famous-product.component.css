@@ -24,7 +24,14 @@ h3{
 p{
     font-size:calc(((13 + 2) / (15)) * 1em);
 }
-
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.buttons button{
+    display: block;
+    width: 40%;
+}
 @media (max-width:768px) {
  
     .left,
@@ -38,6 +45,7 @@ p{
     .right{
         order: 2;
         text-align: center;
+
     }
     
     

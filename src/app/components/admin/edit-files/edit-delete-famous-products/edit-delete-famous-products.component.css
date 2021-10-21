@@ -1,0 +1,15 @@
+.container{
+   
+    padding: 55px 0px;
+}
+.mymain{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 50px;
+
+
+}
+
+

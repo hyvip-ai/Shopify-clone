@@ -1,0 +1,14 @@
+<div class="buttons">
+    <button type="button" class="btn btn-outline-primary">Edit Testimonial</button>
+    <button type="button" (click)="deleteTestimonial()" class="btn btn-outline-danger">Delete Testimonial</button>
+</div>
+<div class="testimonial-body">
+    <p>{{testimonialsData.data}}</p>
+    <i class="fas fa-quote-right"></i>
+</div>
+<div class="testimonial-footer">
+    <img src="{{testimonialsData.image}}" alt="user" />
+    <h3>{{testimonialsData.name}}</h3>
+    <h4>{{testimonialsData.designation}}</h4>
+</div>
+

@@ -15,4 +15,34 @@ export class TestimonialsService {
   gettestimonails(){
     return this.http.get(`${environment.baseUrl}/api/gettetsimonails/${localStorage.getItem("storeId")}`);
   }
+  deleteTestimonials(id:string){
+    return this.http.get(`${environment.baseUrl}/api/deleteTestimonial/${localStorage.getItem("storeId")}/${id}`)
+  }
+  myTesttimonials:Testimonials[]=[
+    {
+      image:"https://i.ibb.co/RzhdmkC/image.png",
+      name:"Kristina",
+      designation:"Web Developer",
+      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
+    },
+    {
+      image:"https://i.ibb.co/pP5G5Zx/image.png",
+      name:"Dev",
+      designation:"Angular Developer",
+      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
+    },
+    {
+      image:"https://i.ibb.co/RzhdmkC/image.png",
+      name:"Kristina",
+      designation:"Web Developer",
+      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
+    },
+    {
+      image:"https://i.ibb.co/pP5G5Zx/image.png",
+      name:"Dev",
+      designation:"Angular Developer",
+      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
+    }
+    
+  ]
 }

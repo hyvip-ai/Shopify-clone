@@ -32,7 +32,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-info" data-dismiss="modal" (click)="getData()">Submit Data</button>
-     
+          <button type="button" *ngIf="testimonials>0" class="btn btn-outline-primary" routerLink="/editOrDeleteTestimonials" data-dismiss="modal">Edit/Delete Testimonials</button>
         </div>
       </div>
     </div>

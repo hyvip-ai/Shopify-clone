@@ -28,6 +28,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-info" (click)="submitFamousForm()" data-dismiss="modal">Submit Data</button>
+          <button type="button" *ngIf="features>0" class="btn btn-outline-primary" data-dismiss="modal" routerLink="/editOrDeleteCollections">Edir/Delete Famous Products</button>
        
         </div>
       </div>

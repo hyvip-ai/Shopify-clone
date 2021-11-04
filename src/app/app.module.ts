@@ -51,7 +51,10 @@ import { EditDeleteFamousProductsComponent } from './Pages/admin/edit-files/edit
 import { EditDeleteFamousProductComponent } from './Pages/admin/edit-files/edit-delete-famous-products/edit-delete-famous-product/edit-delete-famous-product.component';
 import { EditDeleteCollectionsComponent } from './Pages/admin/edit-files/edit-delete-collections/edit-delete-collections.component';
 import { EditDeleteCollectionComponent } from './Pages/admin/edit-files/edit-delete-collections/edit-delete-collection/edit-delete-collection.component';
+import { NotFoundComponent } from './Pages/not-found/not-found.component';
 import { AuthenticationModule } from './Pages/authentication/authentication.module';
+import { CartComponent } from './Pages/cart/cart.component';
+
 
 @NgModule({
   declarations: [
@@ -98,6 +101,8 @@ import { AuthenticationModule } from './Pages/authentication/authentication.modu
     EditDeleteFamousProductComponent,
     EditDeleteCollectionsComponent,
     EditDeleteCollectionComponent,
+    CartComponent,
+    NotFoundComponent,
    
   ],
   imports: [

@@ -35,4 +35,7 @@ export class FeaturedcollectionService {
   deleteCollection(id:string){
     return this.http.get(`${environment.baseUrl}/api/deleteCollection/${localStorage.getItem("storeId")}/${id}`);
   }
+  editCollection(id:string,data:FeatureCard){
+    return this.http.post(`${environment.baseUrl}/api/editFeatureCard/${localStorage.getItem("storeId")}/${id}`,data);
+  }
 }

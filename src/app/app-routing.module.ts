@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
-import { AddFilesComponent } from './components/admin/add-files/add-files.component';
-import { AdminComponent } from './components/admin/admin.component';
-import { EditDeleteBannerComponent } from './components/admin/edit-files/edit-delete-banner/edit-delete-banner.component';
-import { EditDeleteCollectionsComponent } from './components/admin/edit-files/edit-delete-collections/edit-delete-collections.component';
-import { EditDeleteFamousProductsComponent } from './components/admin/edit-files/edit-delete-famous-products/edit-delete-famous-products.component';
-import { EditDeleteFeatureImageComponent } from './components/admin/edit-files/edit-delete-feature-image/edit-delete-feature-image.component';
-import { EditDeleteMiddleBannerComponent } from './components/admin/edit-files/edit-delete-middle-banner/edit-delete-middle-banner.component';
-import { EditDeleteProductsComponent } from './components/admin/edit-files/edit-delete-products/edit-delete-products.component';
-import { EditDeleteTestimonialsComponent } from './components/admin/edit-files/edit-delete-testimonials/edit-delete-testimonials.component';
-import { ProductDetailsFormComponent } from './components/admin/product-details-form/product-details-form.component';
+import { AddFilesComponent } from './Pages/admin/add-files/add-files.component';
+import { AdminComponent } from './Pages/admin/admin.component';
+import { EditDeleteBannerComponent } from './Pages/admin/edit-files/edit-delete-banner/edit-delete-banner.component';
+import { EditDeleteCollectionsComponent } from './Pages/admin/edit-files/edit-delete-collections/edit-delete-collections.component';
+import { EditDeleteFamousProductsComponent } from './Pages/admin/edit-files/edit-delete-famous-products/edit-delete-famous-products.component';
+import { EditDeleteFeatureImageComponent } from './Pages/admin/edit-files/edit-delete-feature-image/edit-delete-feature-image.component';
+import { EditDeleteMiddleBannerComponent } from './Pages/admin/edit-files/edit-delete-middle-banner/edit-delete-middle-banner.component';
+import { EditDeleteProductsComponent } from './Pages/admin/edit-files/edit-delete-products/edit-delete-products.component';
+import { EditDeleteTestimonialsComponent } from './Pages/admin/edit-files/edit-delete-testimonials/edit-delete-testimonials.component';
+import { ProductDetailsFormComponent } from './Pages/admin/product-details-form/product-details-form.component';
 import { CollectionsComponent } from './components/collections/collections.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './Pages/home/home.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
-import { SearchPageComponent } from './components/search-page/search-page.component';
+import { SearchPageComponent } from './Pages/search-page/search-page.component';
+import { ProductDetailsComponent } from './Pages/home/product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,9 @@ const routes: Routes = [
   },
   {
     path:"admin",component:AdminComponent
+  },
+  {
+    path:"product-details/:id",component:ProductDetailsComponent
   },
   {
     path:"addProductDetails",component:ProductDetailsFormComponent
@@ -61,11 +65,15 @@ const routes: Routes = [
   },
   {
     path:"editOrDeleteProductCollection",component:EditDeleteCollectionsComponent
-  }
+  },
+  {
+    path: 'authentication',
+    loadChildren: () => import("./Pages/authentication/authentication.module").then(m => m.AuthenticationModule)
+  } 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { }  

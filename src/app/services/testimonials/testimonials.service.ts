@@ -31,16 +31,11 @@ export class TestimonialsService {
       designation:"Angular Developer",
       data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
     },
+
     {
-      image:"https://i.ibb.co/RzhdmkC/image.png",
-      name:"Kristina",
-      designation:"Web Developer",
-      data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
-    },
-    {
-      image:"https://i.ibb.co/pP5G5Zx/image.png",
-      name:"Dev",
-      designation:"Angular Developer",
+      image:"https://randomuser.me/api/portraits/men/23.jpg",
+      name:"Erik",
+      designation:"Marketing Executive",
       data:"Add Customers review and Testimonials to Showcase your store's happy Customers"
     }
     

@@ -1,0 +1,43 @@
+<div class="left" style="order: {{index%2==0?1:2}};">
+    <img src="{{FeatureData.image}}" alt="Feature Image">
+</div>
+<div class="right" style="order: {{index%2==0?2:1}};display: flex;flex-direction: column;justify-content: center">
+    <h3>{{FeatureData.head}}</h3>
+    <p>{{FeatureData.data}}</p>
+</div>
+<div class="buttons" style="width: 100%; order: 3;">
+    <button class="btn btn-outline-danger" (click)="deleteFeature()">Delete</button>
+    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalFeatureCollectionEdit">Edit</button>
+</div>
+
+<div class="modal fade" id="exampleModalFeatureCollectionEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalFeatureCollectionEditLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalFeatureCollectionEditLabel">Edit Famous Product</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="collectionForm">
+                <div class="form-group">
+                  <label for="img">Image Url <span class="required">*</span></label>
+                  <input formControlName="image" class="form-control" type="text" name="" id="img">
+                </div>
+                <div class="form-group">
+                  <label for="head">Famous Product Heading <span class="required">*</span></label>
+                  <input formControlName="head" class="form-control" type="text" name="" id="head">
+                </div>
+                <div class="form-group">
+                  <label for="data">Famous Product Text <span class="required"></span>*</label>
+                  <input formControlName="data" class="form-control" type="text" name="" id="data">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="submitForm()" data-dismiss="modal">Update Famous Product</button>
+        </div>
+      </div>
+    </div>
+  </div>

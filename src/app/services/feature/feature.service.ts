@@ -18,6 +18,10 @@ export class FeatureService {
   deleteFeature(id:string){
     return this.http.get(`${environment.baseUrl}/api/deletFeature/${localStorage.getItem("storeId")}/${id}`)
   }
+  editFeature(id:string,data:Feature){
+    return this.http.post(`${environment.baseUrl}/api/editFeature/${localStorage.getItem("storeId")}/${id}`,data)
+
+  }
   FeatureData:Feature[]=[
     {
       image:"https://images.unsplash.com/photo-1612336307429-8a898d10e223?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNsb3RoaW5nfGVufDB8MXwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",

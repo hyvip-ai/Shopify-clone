@@ -16,12 +16,18 @@ export class NavComponent implements OnInit {
   storename:string = "Shopify_Clone"
   data:any = null
   ngOnInit(): void {
-  this.store.getStoreName().subscribe(res=>{
-    console.log(res)
-    this.data = res;
-    this.storename = this.data.data.name
-    this.title.setTitle(this.storename)
-  },err=>this.title.setTitle("Shopify_Clone"))
+    if(localStorage.getItem("storeId")){
+      this.store.getStoreName().subscribe(res=>{
+        console.log(res)
+        this.data = res;
+        this.storename = this.data.data.name
+        this.title.setTitle(this.storename)
+      },err=>console.log(err))
+    }
+    else{
+      this.title.setTitle("Shopify_Clone")
+    }
+
   }
   editingOpen(){
     if(localStorage.getItem("storeId")){

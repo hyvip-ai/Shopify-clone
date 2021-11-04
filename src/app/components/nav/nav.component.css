@@ -37,9 +37,7 @@
     color: #544a4a;
   }
   
-  .nav > .nav-links > a:hover {
-    border-bottom: 1px solid rgba(0,0,0,0.4);
-  }
+
   
   .nav > #nav-check {
     display: none;

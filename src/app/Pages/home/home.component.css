@@ -1,3 +1,7 @@
+app-testimonials{
+    display: block;
+    margin: 50px auto;
+}
 app-nav{
     display: block;
     position: sticky;

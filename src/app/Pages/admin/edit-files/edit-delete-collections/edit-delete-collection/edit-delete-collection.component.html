@@ -1,0 +1,49 @@
+<div class="mycard">
+  <div class="image">
+    <img src="{{ cardData.image }}" alt="Product Card" />
+  </div>
+  <div class="description" style="text-align: center">
+    <h3>{{ cardData.title }}</h3>
+    <p>{{ cardData.data }}</p>
+  </div>
+</div>
+<div class="buttons">
+  <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCollectionEdit">Edit</button>
+  <button type="button" class="btn btn-outline-danger" (click)="deleteItem()">
+    Delete
+  </button>
+</div>
+
+<div class="modal fade" id="exampleModalCollectionEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCollection" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCollection">Rdit Collection Product Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="collectionForm">
+            <div class="form-group">
+              <label for="img">Image Url <span class="required">*</span></label>
+              <input formControlName="image" class="form-control" type="text" name="" id="img">
+            </div>
+            <div class="form-group">
+              <label for="head">Collection Heading <span class="required">*</span></label>
+              <input formControlName="title" class="form-control" type="text" name="" id="head">
+            </div>
+            <div class="form-group">
+              <label for="data">Collection Text <span class="required"></span>*</label>
+              <input formControlName="data" class="form-control" type="text" name="" id="data">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-info" data-dismiss="modal" (click)="submitCollectionForm()">Submit Data</button>
+
+       
+        </div>
+      </div>
+    </div>
+  </div>

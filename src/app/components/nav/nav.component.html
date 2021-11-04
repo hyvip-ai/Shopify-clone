@@ -17,5 +17,9 @@
     <a routerLink="/home">Home</a>
     <a routerLink="/collection">Collections</a>
     <a (click)="editingOpen()" style="cursor: pointer;" class="ml-auto">Start Editing</a>
+    <a routerLink="/cart"> <span class="fa-stack fa-2x has-badge" [attr.data-count]="cartProducts">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+    </span></a>
   </div>
 </div>

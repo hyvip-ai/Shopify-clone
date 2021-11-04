@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { CartService } from 'src/app/services/cart/cart.service';
 import { FeatureProductCard } from 'src/app/shared/feature-product-cards';
 
 @Component({
@@ -10,7 +11,7 @@ import { FeatureProductCard } from 'src/app/shared/feature-product-cards';
 })
 export class FeatureProductCardsComponent implements OnInit {
 
-  constructor(private sanitizer:DomSanitizer) { }
+  constructor(private sanitizer:DomSanitizer,private cartService:CartService) { }
 
   ngOnInit(): void {
     console.log(this.productData)
@@ -19,7 +20,15 @@ export class FeatureProductCardsComponent implements OnInit {
   @Input() productData:FeatureProductCard = {
     image:"",
     name:"",
-    price:0
+    price:0,
+    availability:"",
+    details:"",
+
+  }
+  addToCart(){
+    console.log(this.productData)
+    this.cartService.addProducts(this.productData)
+    // location.reload()
   }
 
 

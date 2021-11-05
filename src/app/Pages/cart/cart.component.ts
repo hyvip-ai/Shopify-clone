@@ -15,8 +15,8 @@ export class CartComponent implements OnInit {
     this.cartproducts = this.cartservice.getProducts();
   }
   removeItem(index:number){
-    console.log(index)
-    // this.cartservice.removeproductWithId(index)
+    
+    this.cartservice.removeproductWithId(index)
   }
 
 }

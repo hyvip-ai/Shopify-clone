@@ -25,11 +25,7 @@ export class FeatureProductCardsComponent implements OnInit {
     details:"",
 
   }
-  addToCart(){
-    console.log(this.productData)
-    this.cartService.addProducts(this.productData)
-    // location.reload()
-  }
+
 
 
 }

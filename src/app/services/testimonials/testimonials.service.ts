@@ -18,6 +18,10 @@ export class TestimonialsService {
   deleteTestimonials(id:string){
     return this.http.get(`${environment.baseUrl}/api/deleteTestimonial/${localStorage.getItem("storeId")}/${id}`)
   }
+  editTestimonials(id:string,data:Testimonials){
+    console.log(`${environment.baseUrl}/api/editTestimonials/${localStorage.getItem("storeId")}/${id}`)
+    return this.http.post(`${environment.baseUrl}/api/editTestimonials/${localStorage.getItem("storeId")}/${id}`,data)
+  }
   myTesttimonials:Testimonials[]=[
     {
       image:"https://i.ibb.co/RzhdmkC/image.png",

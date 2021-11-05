@@ -6,5 +6,5 @@
         <h6 class="name">{{ productData.name }}</h6>
         <p class="price">Rs. {{ productData.price }}</p>
     </div>
-  <button (click)="addToCart()">Add To Cart</button>
+  <button routerLink="/product-details/{{productData.id}}">See Details</button>
 </div>

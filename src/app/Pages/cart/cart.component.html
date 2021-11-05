@@ -1,0 +1,49 @@
+<div class="container mb-4">
+  <h1 style="font-weight: 300">Cart</h1>
+  <div class="cart-table" *ngIf="cartproducts.length">
+    <div class="row cart-row" *ngFor="let item of cartproducts;index as i">
+      <div class="col-xs-12 col-md-2">
+        <img
+          src="{{item.image}}"
+          width="100%"
+        />
+      </div>
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="product-name">{{item.name}}</div>
+
+        <div class="product-price">
+          <input
+            readonly
+            type="text"
+            
+            value="1"
+            
+            class="form-control"
+          />
+
+          <div class="product-price"><small>x</small> ${{item.price}}</div>
+        </div>
+      </div>
+
+      <div class="col-md-3 cart-actions">
+        <div class="product-price-total">${{item.price}}</div>
+        <div class="product-delete">
+          <button
+            type="button"
+            data-toggle="tooltip"
+            title="Ta bort"
+            class="delete"
+            (click)="removeItem(i)"
+          >
+            <i class="fas fa-times-circle"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <div *ngIf="!cartproducts.length">
+    <h1>No Products Added</h1>
+  </div>
+</div>

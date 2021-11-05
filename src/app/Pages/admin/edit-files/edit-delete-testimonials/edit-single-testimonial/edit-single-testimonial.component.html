@@ -1,5 +1,5 @@
 <div class="buttons">
-    <button type="button" class="btn btn-outline-primary">Edit Testimonial</button>
+    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalTestimonials">Edit Testimonial</button>
     <button type="button" (click)="deleteTestimonial()" class="btn btn-outline-danger">Delete Testimonial</button>
 </div>
 <div class="testimonial-body">
@@ -11,4 +11,38 @@
     <h3>{{testimonialsData.name}}</h3>
     <h4>{{testimonialsData.designation}}</h4>
 </div>
-
+<div class="modal fade" id="exampleModalTestimonials" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelTestimonials" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabelTestimonials">Add Banner Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="testimonialsForm">
+            <div class="form-group">
+              <label for="img">Name <span class="required">*</span></label>
+              <input formControlName="name" class="form-control" type="text" name="" id="img">
+            </div>
+            <div class="form-group">
+              <label for="head">Designation<span class="required">*</span></label>
+              <input formControlName="designation" class="form-control" type="text" name="" id="head">
+            </div>
+            <div class="form-group">
+              <label for="head">Image<span class="required">*</span></label>
+              <input formControlName="image" class="form-control" type="text" name="" id="image">
+            </div>
+            <div class="form-group">
+              <label for="data">Testimonial <span class="required"></span>*</label>
+              <input formControlName="data" class="form-control" type="text" name="" id="data">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-info" data-dismiss="modal" (click)="getData()">Submit Data</button>
+        </div>
+      </div>
+    </div>
+  </div>

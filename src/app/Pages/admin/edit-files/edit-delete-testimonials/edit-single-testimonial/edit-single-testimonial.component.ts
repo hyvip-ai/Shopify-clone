@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { Testimonials } from 'src/app/shared/Testimonials';
 import Swal from 'sweetalert2';
@@ -14,6 +15,12 @@ export class EditSingleTestimonialComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  testimonialsForm = new FormGroup({
+    name:new FormControl("",[Validators.required]),
+    designation:new FormControl("",[Validators.required]),
+    data:new FormControl("",[Validators.required]),
+    image:new FormControl("",[Validators.required])
+  })
   @Input() testimonialsData:Testimonials = {
     name:"",
     data:"",
@@ -36,5 +43,22 @@ export class EditSingleTestimonialComponent implements OnInit {
       })
     }
   }
+  
+  getData(){
+    if(this.testimonialsForm.valid){
+      console.log(this.testimonialsForm.value)
+      this.testiService.editTestimonials(this.testimonialsData.id!,this.testimonialsForm.value).subscribe(res=>{
+
+          location.reload()
+     
+      })
+    }
+    else{
+      Swal.fire({
+        icon:'error',
+        title:"Form Value must be Valid"
+      })
+    }
+}
 
 }

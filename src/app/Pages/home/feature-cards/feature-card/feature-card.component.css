@@ -14,17 +14,17 @@
 .mycard .image img:hover{
     transform: scale(1.1);
 }
-.description{
+.description-feature{
     padding: 20px 0px;
 }
-.description h3{
+.description-feature h3{
     font-size:calc(((17) / (15)) * 1em);
     font-weight: 700;
     font-family: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
     color: #3a3a3a;
 }
 
-.description p{
+.description-feature p{
 font-size: calc(((15 - 1)/ (15)) * 1em);
 font-family: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
 color: #333232;
@@ -32,10 +32,10 @@ color: #333232;
 
 
 @media only screen and (max-width:500px) {
-    .description h3{
+    .description-feature h3{
         font-size:calc(((16) / (15)) * 1em);
     }
-    .description p{
+    .description-feature p{
         font-size: calc(((13 - 1)/ (15)) * 1em);
     }
 }

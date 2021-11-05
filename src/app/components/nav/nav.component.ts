@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/services/cart/cart.service';
 import { StoreService } from 'src/app/services/store/store.service';
 
 @Component({
@@ -9,13 +10,14 @@ import { StoreService } from 'src/app/services/store/store.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
-  constructor(private store:StoreService,private router:Router,private title:Title) { 
+  cartProducts:number = 0
+  constructor(private store:StoreService,private router:Router,private title:Title,private cartService:CartService) { 
 
   }
   storename:string = "Shopify_Clone"
   data:any = null
   ngOnInit(): void {
+    this.cartProducts = this.cartService.getProducts().length
     if(localStorage.getItem("storeId")){
       this.store.getStoreName().subscribe(res=>{
         console.log(res)

@@ -45,13 +45,16 @@ import { ImageModalComponent } from './components/image-modal/image-modal.compon
 import { EditDeleteProductsComponent } from './Pages/admin/edit-files/edit-delete-products/edit-delete-products.component';
 import { EditDeleteAProductCardComponent } from './Pages/admin/edit-files/edit-delete-products/edit-delete-a-product-card/edit-delete-a-product-card.component';
 import { EditDeleteTestimonialsComponent } from './Pages/admin/edit-files/edit-delete-testimonials/edit-delete-testimonials.component';
-import { ProductDetailsComponent } from './Pages/home/product-details/product-details.component';
+import { ProductDetailsComponent } from './Pages/product-details/product-details.component';
 import { EditSingleTestimonialComponent } from './Pages/admin/edit-files/edit-delete-testimonials/edit-single-testimonial/edit-single-testimonial.component';
 import { EditDeleteFamousProductsComponent } from './Pages/admin/edit-files/edit-delete-famous-products/edit-delete-famous-products.component';
 import { EditDeleteFamousProductComponent } from './Pages/admin/edit-files/edit-delete-famous-products/edit-delete-famous-product/edit-delete-famous-product.component';
 import { EditDeleteCollectionsComponent } from './Pages/admin/edit-files/edit-delete-collections/edit-delete-collections.component';
 import { EditDeleteCollectionComponent } from './Pages/admin/edit-files/edit-delete-collections/edit-delete-collection/edit-delete-collection.component';
+import { NotFoundComponent } from './Pages/not-found/not-found.component';
 import { AuthenticationModule } from './Pages/authentication/authentication.module';
+import { CartComponent } from './Pages/cart/cart.component';
+
 
 @NgModule({
   declarations: [
@@ -98,6 +101,8 @@ import { AuthenticationModule } from './Pages/authentication/authentication.modu
     EditDeleteFamousProductComponent,
     EditDeleteCollectionsComponent,
     EditDeleteCollectionComponent,
+    CartComponent,
+    NotFoundComponent,
    
   ],
   imports: [

@@ -15,7 +15,9 @@ import { CollectionsComponent } from './components/collections/collections.compo
 import { HomeComponent } from './Pages/home/home.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
 import { SearchPageComponent } from './Pages/search-page/search-page.component';
-import { ProductDetailsComponent } from './Pages/home/product-details/product-details.component';
+import { ProductDetailsComponent } from './Pages/product-details/product-details.component';
+import { CartComponent } from './Pages/cart/cart.component';
+import { NotFoundComponent } from './Pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -69,7 +71,13 @@ const routes: Routes = [
   {
     path: 'authentication',
     loadChildren: () => import("./Pages/authentication/authentication.module").then(m => m.AuthenticationModule)
-  } 
+  } ,
+  {
+    path:"cart",component:CartComponent
+  },
+  {
+    path:"**",component:NotFoundComponent
+  }
 ];
 
 @NgModule({

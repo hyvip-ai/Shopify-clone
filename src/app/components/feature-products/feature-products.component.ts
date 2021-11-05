@@ -15,22 +15,28 @@ export class FeatureProductsComponent implements OnInit {
       this.service.getProducts().subscribe(
         (res) => {
           this.data = res;
-          if (this.data.data.length > 0) {
+          console.log(this.data)
+        
             for (let item of this.data.data) {
               var myobj = {
+                id:'',
                 image: '',
                 name: '',
                 price: '',
+                availability:"",
+                details:"",
+
               };
               myobj.image = item.image;
               myobj.name = item.name;
               myobj.price = item.price;
+              myobj.availability = item.availability;
+              myobj.details = item.details;
+              myobj.id = item._id;
               this.productDetails.push(myobj);
             }
             console.log(this.productDetails);
-          } else {
-            this.productDetails = this.productDetailsTemp;
-          }
+
         },
         (err) => {
           this.productDetails = this.productDetailsTemp;
@@ -42,7 +48,5 @@ export class FeatureProductsComponent implements OnInit {
   }
   productDetails: FeatureProductCard[] = [];
   productDetailsTemp: FeatureProductCard[] = this.service.productsData;
-  getProductDetails(name: string) {
-    console.log(name);
-  }
+
 }

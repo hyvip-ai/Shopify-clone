@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './auth/auth.guard';
+import { AuthGuard } from './Guard/store/auth.guard';
 import { AddFilesComponent } from './Pages/admin/add-files/add-files.component';
 import { AdminComponent } from './Pages/admin/admin.component';
 import { EditDeleteBannerComponent } from './Pages/admin/edit-files/edit-delete-banner/edit-delete-banner.component';
